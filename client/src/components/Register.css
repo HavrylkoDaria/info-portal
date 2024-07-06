@@ -1,0 +1,114 @@
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Додає вирівнювання по центру */
+}
+
+.form-group {
+  width: 100%;
+  max-width: 300px; /* Робить поля коротшими */
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+}
+
+.register-btn {
+  padding: 10px 20px; /* Робить кнопку трохи ширшою */
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #0056b3;
+}
+
+/* Додатковий дизайн */
+.register-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.register-container:before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, rgba(0, 123, 255, 0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, rgba(0, 123, 255, 0.1) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(0, 123, 255, 0.1) 25%, transparent 25%);
+  background-size: 100px 100px;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+
+.register-container:hover:before {
+  transform: rotate(20deg);
+}
+
+.register-container .form-group,
+.register-container .register-btn,
+.register-container .register-link {
+  position: relative;
+  z-index: 1;
+}
